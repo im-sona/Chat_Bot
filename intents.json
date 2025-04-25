@@ -2,29 +2,13 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
-      ],
-      "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
-      ]
+      "patterns": ["Hi", "Hey", "How are you", "Is anyone there?", "Hello", "Good day"],
+      "responses": ["Hey :-)", "Hello, thanks for visiting", "Hi there, what can I do for you?", "Hi there, how can I help?"]
     },
     {
       "tag": "goodbye",
       "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
+      "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
     },
     {
       "tag": "thanks",
@@ -33,52 +17,78 @@
     },
     {
       "tag": "items",
-      "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
-      ],
-      "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
-      ]
+      "patterns": ["Which items do you have?", "What kinds of items are there?", "What do you sell?"],
+      "responses": ["We sell coffee and tea", "We have coffee and tea"]
     },
     {
       "tag": "payments",
-      "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
-      ],
-      "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
-      ]
+      "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Can I pay with Paypal?", "Are you cash only?"],
+      "responses": ["We accept VISA, Mastercard and Paypal", "We accept most major credit cards, and Paypal"]
     },
     {
       "tag": "delivery",
-      "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
-      ],
-      "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
-      ]
+      "patterns": ["How long does delivery take?", "How long does shipping take?", "When do I get my delivery?"],
+      "responses": ["Delivery takes 2-4 days", "Shipping takes 2-4 days"]
     },
     {
       "tag": "funny",
-      "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
-      ],
+      "patterns": ["Tell me a joke!", "Tell me something funny!", "Do you know a joke?"],
+      "responses": ["Why did the hipster burn his mouth? He drank the coffee before it was cool.", "What did the buffalo say when his son left for college? Bison."]
+    },
+    {
+      "tag": "education",
+      "patterns": ["What is python?", "what is python?", "Tell me about Python", "Can you explain Python?", "Define Python", "Python programming language"],
+      "responses": ["Python is a high-level, interpreted programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python emphasizes code readability and allows programmers to express concepts in fewer lines of code compared to other languages like C++ or Java."]
+    },
+    {
+      "tag": "java",
+      "patterns": ["What is java?", "what is java?", "Tell me about java", "Can you explain java?", "Define java", "java programming language"],
+      "responses": ["Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It was originally developed by Sun Microsystems and released in 1995. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture."]
+    },
+    {
+      "tag": "code",
+      "patterns": ["Print First 10 natural numbers using python"],
       "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
+        "<pre><code>for i in range(1, 11):\n  print(i)</code></pre>"
+      ]
+    },
+    {
+      "tag":"javacode",
+      "patterns":["Print First 10 natural numbers using java"],
+      "responses":["<pre><code>public class Main {\n public static void main(String[] args) \n{\nfor (int i = 1; i <= 10; i++)\n {\n System.out.println(i);\n }\n }\n }</code></pre>"]
+    },
+    
+    {
+      "tag": "language",
+      "patterns": ["rain translate in kannada", "Rain translate in kannada"],
+      "responses": ["'Rain' in Kannada is translated to ಮಳೆ "]
+    },
+    {
+      "tag": "come",
+      "patterns": ["come translate in kannada", "Come translate in kannada"],
+      "responses": ["'Come' in Kannada is translated to come"]
+    },
+    {
+      "tag": "image",
+      "patterns": ["Show me a cat","show me a cat image"],
+      "responses": [
+        "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4aBhloyMLx5qA6G6wSEi0s9AvDu1r7utrbQ&s' alt='Cat Image'>"
+      ]
+    },
+    {
+      "tag": "images",
+      "patterns": ["Show me a flower","show me a flower image"],
+      "responses": [
+        "<img src='https://cdn.pixabay.com/photo/2016/07/14/09/39/bouquet-1516438_640.jpg' alt='flower Image'>","<img src= 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRYL-w1jzwxWY7UzNmMwAizsNlLqQy9zNx6Q&s'  alt=flower>"
+      ]
+    },
+    {
+      "tag": "q",
+      "patterns": ["elaborate on routers","Elaborate on routers"],
+      "responses": [
+        "A router is a device that connects two or more networks, directing data packets between them. Think of it as a traffic manager for your internet connection, ensuring data gets to the right destination efficiently. "
       ]
     }
+    
   ]
 }

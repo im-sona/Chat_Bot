@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+</head>
+<body>
+<div class="container">
+    <div class="chatbox">
+        <form id="chatForm" class="chatbox__form" method="post" action="/chatbox">
+            <label for="name" class="chatbox__label">USER NAME</label>
+            <input type="text" id="name" name="name" class="chatbox__input" placeholder="Enter your name">
+            <div class="chatbox__button">
+                <button type="submit" class="chatbox__submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

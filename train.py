@@ -122,6 +122,31 @@ data = {
 "all_words": all_words,
 "tags": tags
 }
+def translate(sentence):
+    # Tokenize the input sentence
+    sentence = tokenize(sentence)
+    # Create bag of words
+    X = bag_of_words(sentence, all_words)
+    X = X.reshape(1, X.shape[0])
+    X = torch.from_numpy(X).to(torch.float32)
+
+    # Make predictions
+    output = model(X)
+    _, predicted = torch.max(output, dim=1)
+    
+    tag = tags[predicted.item()]
+
+    # Find the corresponding intent
+    for intent in intents['intents']:
+        if intent['tag'] == tag:
+            response = random.choice(intent['responses'])
+            break
+
+    return response
+
+# Example usage:
+input_sentence = "Translate this sentence."
+print(translate(input_sentence))
 
 FILE = "data.pth"
 torch.save(data, FILE)
